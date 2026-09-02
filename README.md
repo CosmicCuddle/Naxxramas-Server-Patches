@@ -4,6 +4,18 @@ Client patch documentation and downloads for the **Naxxramas World of Warcraft 3
 
 This repository keeps a permanent record of the client patches used by Naxxramas, including required Main Server Patches and separate Optional Patches.
 
+## Downloads
+
+### Required Main Server Patch
+➡️ [Download the latest Naxxramas Main Server Patch](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.7)
+
+Required to play on the Naxxramas server.
+
+### Optional Client Patches
+➡️ [View the Naxxramas Optional Client Patches](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/optional-v1.0)
+
+Includes the Vanilla and Burning Crusade login/loading screen replacements.
+
 ## Current Main Server Patch
 
 **Version 1.0.6.7**
@@ -33,11 +45,13 @@ See **[OPTIONAL-PATCHES.md](OPTIONAL-PATCHES.md)**. This section will be expande
 
 1. Download the latest required Main Server Patch files from the repository's **Releases** section.
 2. Close World of Warcraft before replacing patch files.
-3. Place the required `.mpq` files in the appropriate World of Warcraft 3.3.5a `Data` folder.
+3. Place the required `.mpq` files in your World of Warcraft 3.3.5a `Data` folder.
 4. Replace older versions of the same Naxxramas patch files when updating.
-5. Start the game normally.
+5. If the release notes, Discord announcement, or in-game server restart message tells you to refresh your client cache, delete the `Cache` folder before starting the game again.
+6. The `Cache` folder is found in your main World of Warcraft 3.3.5a installation folder, usually alongside folders such as `Data`, `Interface` and `WTF`.
+7. Start World of Warcraft normally. The client will automatically rebuild the `Cache` folder when needed.
 
-Always use the patch files from the latest Naxxramas Main Server Patch release unless a server announcement says otherwise.
+Always use the patch files from the latest Naxxramas Main Server Patch release and follow any additional instructions included in the release notes, server announcements or in-game restart messages.
 
 ## Compatibility
 
