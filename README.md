@@ -7,7 +7,7 @@ This repository keeps a permanent record of the client patches used by Naxxramas
 ## Downloads
 
 ### Required Main Server Patch
-➡️ [Download the latest Naxxramas Main Server Patch](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.7)
+➡️ [Download the latest Naxxramas Main Server Patch](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.8.2)
 
 Required to play on the Naxxramas server.
 
