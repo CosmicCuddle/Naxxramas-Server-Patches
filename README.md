@@ -18,7 +18,7 @@ Includes the Vanilla and Burning Crusade login/loading screen replacements.
 
 ## Current Main Server Patch
 
-**Version 1.0.6.7**
+**Version 1.0.6.8.2**
 
 The required client patch set currently consists of:
 
