@@ -7,7 +7,7 @@ This repository keeps a permanent record of the client patches used by Naxxramas
 ## Downloads
 
 ### Required Main Server Patch
-➡️ [Download the latest Naxxramas Main Server Patch](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.8.2)
+➡️ [Download the latest Naxxramas Main Server Patch](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.8.4)
 
 Required to play on the Naxxramas server.
 
@@ -18,12 +18,16 @@ Includes the Vanilla and Burning Crusade login/loading screen replacements.
 
 ## Current Main Server Patch
 
-**Version 1.0.6.8.2**
+**Version 1.0.6.8.4**
 
 The required client patch set currently consists of:
 
 - `patch-V.mpq`
 - `patch-Z.mpq`
+
+The latest release provides the updated [`patch-V.mpq`](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/download/v1.0.6.8.4/patch-V.mpq). The unchanged [`patch-Z.mpq`](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/download/v1.0.6.7/patch-Z.mpq) can be obtained from the earlier 1.0.6.7 release if it is not already installed.
+
+**When upgrading:** replace `patch-V.mpq` and retain your existing `patch-Z.mpq`. **For a fresh installation:** make sure both required files are installed.
 
 The MPQ files are distributed through GitHub Releases rather than being committed directly to the repository.
 
@@ -39,7 +43,7 @@ See **[PATCHES.md](PATCHES.md)** for the reconstructed Main Server Patch history
 
 Optional patches are separate client modifications that are not required to connect to or play on the server.
 
-See **[OPTIONAL-PATCHES.md](OPTIONAL-PATCHES.md)**. This section will be expanded as the optional patch collection is documented.
+See **[OPTIONAL-PATCHES.md](OPTIONAL-PATCHES.md)** for the documented optional client patches.
 
 ## Installation
 
@@ -47,7 +51,7 @@ See **[OPTIONAL-PATCHES.md](OPTIONAL-PATCHES.md)**. This section will be expande
 2. Close World of Warcraft before replacing patch files.
 3. Place the required `.mpq` files in your World of Warcraft 3.3.5a `Data` folder.
 4. Replace older versions of the same Naxxramas patch files when updating.
-5. If the release notes, Discord announcement, or in-game server restart message tells you to refresh your client cache, delete the `Cache` folder before starting the game again.
+5. For Patch 1.0.6.8.4, delete the `Cache` folder before starting the game again. Follow any additional cache instructions in future releases or server announcements.
 6. The `Cache` folder is found in your main World of Warcraft 3.3.5a installation folder, usually alongside folders such as `Data`, `Interface` and `WTF`.
 7. Start World of Warcraft normally. The client will automatically rebuild the `Cache` folder when needed.
 
