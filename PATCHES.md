@@ -417,6 +417,127 @@ This release was accompanied by several server-side Individual Progression and e
 
 ---
 
+## Patch 1.0.6.8 — Vanilla Spell & Item Restoration
+
+[GitHub Release — 1.0.6.8](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.8)
+
+### Warlock — Demon Skin
+
+- Restored both Vanilla ranks of Demon Skin.
+- Restored the original Armor values and passive Health regeneration.
+- Replaced percentage-based Mana costs with fixed Mana costs.
+
+### Warlock — Demon Armor
+
+- Restored all five Vanilla ranks of Demon Armor.
+- Restored Armor, Shadow Resistance and passive Health regeneration.
+- Restored fixed Mana costs and removed the later increased-healing-received effect.
+
+### Green Whelp Armor
+
+- Restored the Sleep proc duration from **10 seconds to 30 seconds**.
+- Raised the maximum affected target level to **63**.
+
+### Rogue — Riposte
+
+- Restored the **6-second Disarm** effect.
+- Removed the later melee attack-speed reduction and additional combo-point effects.
+
+---
+
+## Patch 1.0.6.8.2 — Racial, Item & Consumable Updates
+
+[GitHub Release — 1.0.6.8.2](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.8.2)
+
+### Racial Restorations
+
+- Restored **Stoneform** to grant Bleed, Poison and Disease immunity for its full 8-second duration.
+- Added the Tauren passive **Ancestral Macecraft**: +5 Mace Skill and +5 Two-Handed Mace Skill.
+- Added the Forsaken passive **Forsaken Swordsmanship**: +5 Sword Skill and +5 Two-Handed Sword Skill.
+
+### Robe of the Archmage
+
+- Increased the Mana restored by the robe's use effect from **375–625** to **1,880–2,625**.
+
+### Darkmoon Card: Blue Dragon
+
+- Updated the trinket's Mana-restoration effect.
+- The released notes specify a **5% proc chance** and **2% maximum Mana restored every 2 seconds for 12 seconds**, up to **12% maximum Mana** over the full duration.
+
+### Vanilla Consumable Descriptions
+
+- Removed later Battle Elixir / Guardian Elixir classification text from applicable Vanilla consumables.
+- The actual consumable stacking restoration was handled server-side and is recorded separately in the Change Notes.
+
+---
+
+## Patch 1.0.6.8.3 — Racial Restorations & Arms Talents
+
+[GitHub Release — 1.0.6.8.3](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.8.3)
+
+### Racial Updates
+
+- Completed a broad racial restoration pass for every playable race **except Draenei**.
+- Restored Vanilla-style Weapon Skill and Resistance racials where appropriate.
+- Restored Human Spirit's +5% Spirit bonus and Orc Hardiness's older Stun resistance behaviour.
+- Restored Blood Fury's 50% healing-received penalty.
+- Updated Troll Berserking to scale between 20% and 30% Haste according to Health.
+- Restored Blood Elf Mana Tap and its Arcane Torrent interaction.
+- Restored the immunity period of Will of the Forsaken.
+- Added the new Undead racial **Touch of the Grave**.
+
+### Warrior — Arms
+
+- Added the custom **Rend Flurry** talent, which can spread Rend to up to two nearby enemies; bleed-immune enemies can instead take 150% Weapon Damage.
+- Rend Flurry has a 60-second cooldown and lasts 15 seconds.
+- Reduced Improved Heroic Strike to one rank, providing a 5 Rage cost reduction.
+- Expanded Improved Rend to three ranks: Rank 3 increases Rend damage by 22% and gives Rend ticks a 3% chance to generate 25 Rage.
+
+### Rogue — Riposte
+
+- Restored the **1 Combo Point** effect that had been removed in 1.0.6.8.
+- Riposte retains 150% Weapon Damage and its 6-second Disarm.
+
+### Accompanying Server-Side Updates
+
+- Further low-population adjustments to Brewfest's Dark Iron Attack and Hallow's End's Shade of the Horseman events.
+- Moved several custom systems into Naxxramas Core to simplify maintenance.
+
+---
+
+## Patch 1.0.6.8.4 — Spell Restoration & Progression
+
+[GitHub Release — 1.0.6.8.4](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.8.4)
+
+### Enchant Weapon — Crusader
+
+Increased the enchantment's reagent requirements without changing its combat effect:
+
+- Large Brilliant Shards: **4 → 10**.
+- Righteous Orbs: **2 → 6**.
+- Added **1 Nexus Crystal**.
+
+The affected enchantment spell is **20034**.
+
+### Dire Maul — Custom Progression Key
+
+- Introduced a custom key and matching lock for gated Dire Maul progression.
+- Access requires the corresponding Onyxia progression milestone and key.
+
+### Warlock — Wrack
+
+- Introduced the custom **Wrack** spell (**90058**).
+- Associated with **Shadow Mastery Rank 5/5** for Affliction Warlocks.
+
+### Shaman — Rockbiter Weapon
+
+- Restored the original seven-rank Rockbiter Weapon progression: **8017–8019**, **10399**, **16314–16316**.
+- Replaced the later weapon-damage bonus design with rank-based melee Attack Power and additional threat from melee auto-attacks.
+- Added hidden threat helper **90059** and seven Attack Power helpers **90060–90066**.
+- Continued using the existing weapon enchantment data; the restored effects did not require changing `SpellItemEnchantment.dbc`.
+
+---
+
 # Development and Historical Notes
 
 ## Working Files vs Released MPQs
@@ -440,7 +561,7 @@ The Individual Progression `SpellItemEnchantment.dbc` resource used during the 1
 - `4001` — **+30 Healing Spells and +10 Damage Spells**
 - `4003` — **+35 Healing Spells and +12 Damage Spells**
 
-These two records were not included in the server's finished `SpellItemEnchantment.dbc` and remain absent in the current 1.0.6.7 patch.
+These two records were not included in the server's finished `SpellItemEnchantment.dbc` for the historically reviewed 1.0.6.7 patch. Their status in later releases has not been re-verified as part of this historical review.
 
 This is recorded as a **review item**, not a confirmed bug, because the archived files prove the difference but do not prove whether the omission was intentional.
 
@@ -450,9 +571,9 @@ This is recorded as a **review item**, not a confirmed bug, because the archived
 
 The latest archived Main Server Patch covered by this history is:
 
-**Patch 1.0.6.7 — Individual Progression Update**
+**Patch 1.0.6.8.4 — Spell Restoration & Progression**
 
 The current required client patch set uses:
 
-- `patch-V.mpq`
-- `patch-Z.mpq`
+- `patch-V.mpq` — latest version included with [Patch 1.0.6.8.4](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.8.4).
+- `patch-Z.mpq` — unchanged supporting file available in [Patch 1.0.6.7](https://github.com/CosmicCuddle/Naxxramas-Server-Patches/releases/tag/v1.0.6.7); retain the installed copy when updating.
